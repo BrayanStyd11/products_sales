@@ -28,6 +28,20 @@
   color: #61dafb;
 }
 
+h1{font-family:verdana;font-weight:100;}
+
+p{
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.btn-size{
+  margin-right: 10px;
+  margin-bottom:5px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
