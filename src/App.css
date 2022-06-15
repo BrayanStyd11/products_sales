@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden
+}
 .App {
   text-align: center;
 }
@@ -40,6 +43,43 @@ p{
 .btn-size{
   margin-right: 10px;
   margin-bottom:5px;
+}
+
+#color{
+  border-radius: 50%;
+  width: 28px;
+  margin-right: 10px;
+}
+
+#color-selected{
+  border-color: blue;
+  border-radius: 50%;
+  width: 28px;
+  margin-right: 10px;
+}
+
+#color::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+#color::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+#color-selected::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+#color-selected::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 50%;
+    padding: 3px;
 }
 
 @keyframes App-logo-spin {
