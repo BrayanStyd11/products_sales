@@ -18,7 +18,7 @@ export default function Cart(props) {
         {
             title: 'Producto',
             dataIndex: 'name',
-            key: 'name',
+            key: 'name',            
         },
         {
             title: 'Cantidad',
@@ -34,6 +34,7 @@ export default function Cart(props) {
             title: 'Talla',
             dataIndex: 'size',
             key: 'size',
+            responsive: ['md'],
         },
         {
             title: 'Precio',
