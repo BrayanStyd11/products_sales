@@ -5,6 +5,11 @@ const { Option } = Select;
 
 export default function Cart(props) {    
 
+    /**
+     * Función para obtener los datos necesarios para proceder con el pago
+     * (No se realiza mas proceso, se obtienen los datos y se envia el mensaje)
+     * @param {object} values 
+     */
     const onFinish = (values) => {
         console.log('Data:', values);
 
@@ -14,6 +19,9 @@ export default function Cart(props) {
         });
     };
 
+    /**
+     * Constante para crear las columnas a ver, en responsive se especifica la columna a ocultar en vistas de celular
+     */
     const columns = [
         {
             title: 'Producto',
@@ -42,6 +50,10 @@ export default function Cart(props) {
             key: 'price',
         }
     ];
+    /**
+     * Se mapean los datos elegidos en el modulo anterior
+     *
+     */
     return (
         <>
             <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} style={{ marginTop: '50px' }}>

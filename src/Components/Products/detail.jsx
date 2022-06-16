@@ -17,6 +17,9 @@ export default function ProductsList(props) {
         getProducts();
     },[]);
 
+    /**
+     * Se crea una función para obtener la información necesaria y enviarla al estado
+     */
     const getProducts = () => {        
         axios.get('https://graditest-store.myshopify.com/products/free-trainer-3-mmw.js').then((res) => {
             setProducts(res.data);
@@ -25,11 +28,21 @@ export default function ProductsList(props) {
         });
     }
 
+    /**
+     * Función para dar formato a moneda (Dolar estadounidense)
+     */
+
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
         minimumFractionDigits: 0
     })
+
+    /**
+     * Función para calcular el total del precio y enviar el 
+     * dato de la cantidad del producto a comprar y el total
+     * @param {number} quantity 
+     */
 
     const onChange = (quantity) => {
         let total = products.price * quantity;
@@ -37,6 +50,10 @@ export default function ProductsList(props) {
         setQuantity(quantity);
         setTotalPaid(total);
     };
+
+    /**
+     * Función para recolectar todos los datos necesarios para enviar al carrito
+     */
 
     const onFinish =()=>{
         let data = []
